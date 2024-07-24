@@ -7,16 +7,16 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                apt update
-                apt upgrade -y
-                apt-get install python3.10 -y
+                apt-get update
+                apt-get upgrade -y
+                apt install python3 -y
                 '''
             }
         }
         stage('Test') {
             steps {
                 sh 'apt-get update && apt-get upgrade -y'
-                sh 'apt install python3.10 -y'
+                sh 'apt install python3 -y'
                 sh 'apt install python3-venv -y'
                 sh 'apt install python3-pip -y'
                 sh 'python3 -m venv .venv'
