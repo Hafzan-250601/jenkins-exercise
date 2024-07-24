@@ -21,7 +21,7 @@ pipeline {
                 sh 'apt install python3-pip -y'
                 sh 'python3 -m venv .venv'
                 sh '. .venv/bin/activate'
-                sh 'pip3 install DateTime'
+                sh 'pip3 install datetime'
                 sh 'python3 py_test.py'
             }
         }
